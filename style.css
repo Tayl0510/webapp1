@@ -1,0 +1,152 @@
+{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+html,  body{
+  height: 100%;
+  min-height:100%;
+  overflow: hidden;
+  position: relative;
+  font-family:Roboto, Helvetica, Calibri, sans-serif;
+  background: hsl(40, 30%, 70%);
+}
+[data-role="page"]{
+  position:fixed;
+  width: 100%;
+  height: 100%;
+  padding:1rem 2rem 0 0;
+  overflow:hidden;
+}
+#title{
+  background-color: hsl(219, 37%, 69%);
+}
+#cast{
+  background-color: hsl(219, 37%, 69%);
+}
+#reviews{
+  background-color: hsl(219, 37%, 69%);
+}
+[data-role="page"] h2{
+    font-family: cursive;
+  font-size: 3rem;
+  text-align: center;
+}
+[data-role="page"] h3{
+    font-family: fantasy;
+  font-size: 2rem;
+}
+[data-role="page"] h4{
+    font-family: fantasy;
+  font-size: 1rem;
+}
+[data-role="page"] h5{
+    font-family: cursive;
+  font-size: 2rem;
+  text-align: center;
+}
+[data-role="page"] p{
+    font-family: fantasy;
+  font-size: 1.2rem;
+}
+nav{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width:100%;
+  z-index: 1000;
+  box-shadow:0 -2px 2px rgba(255,255,255,0.32);
+}
+nav a{
+  padding: 0.5rem 1rem;
+  max-width:33%;
+  min-width:30%;
+  display:block;
+  float:left;
+  border:1px solid #666;
+  border-bottom: none;
+  border-left:none;
+  text-align:center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: lightslategray;
+  color: black;
+  font-weight:700;
+  font-size: 2rem;
+}
+nav a:last-child{
+  border-right: none;
+}
+.active-page{
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+  animation: slide-in 2s 1; 
+  animation-fill-mode: both; 
+  z-index: 100;
+}
+.inactive-page{
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+  animation: slide-out 2s 1;  
+  animation-fill-mode: both;
+  z-index: 100;
+}
+@keyframes slide-in{
+  0%{
+    opacity: 0;
+      transform: translate3d(0, -100%, 0);
+  }
+  100%{
+    opacity: 1;
+      transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slide-out{
+  0%{
+    opacity: 0;
+      transform: translate3d(0, 0, 0);
+  }
+  100%{
+    opacity: 1;
+      transform: translate3d(0, 100%, 0);
+  }
+}
+.hidden{
+  display:none;
+}
+ul{
+    padding:2;    
+}
+li{
+  padding:0.5em 0 0.5em 1.5em;
+  margin-bottom:0.2em;
+  text-indent:1em;
+  font-weight:bold;
+  list-style:none;
+  background-repeat:no-repeat;
+  background-image: url("HarrisonFord.png");
+}
+li[data-type="HarrisonFord"]{
+    background-image: url("HarrisonFord.png");
+}
+li[data-type="MarkHamill"]{
+    background-image: url("MarkHamill.png");
+}
+li[data-type="CarrieFisher"]{
+    background-image: url("CarrieFisher.png");
+}
+li[data-type="AdamDriver"]{
+    background-image: url("AdamDriver.png");
+}
+li[data-type="DaisyRidley"]{
+    background-image: url("DaisyRidley.png");
+}
+li[data-type="JohnBoyega"]{
+    background-image: url("JohnBoyega.png");
+}
+img {
+    width:25px;
+    color: white;
+    fill: currentColor;
+}
+svg {
+    width:25px;
+}
